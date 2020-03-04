@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing</title>
+    <link href="fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="block1">
+            <div class="wrapper">
+                <div class="block1-header">
+                    <div class="block1-header__logo">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="block1-header__messeng">
+                        <img src="img/ins.png" alt="ins">
+                        <img src="img/f.png" alt="ins">
+                        <img src="img/vk.png" alt="ins">
+                    </div>
+                </div>
+                <div class="block1-content">
+                    <div class="block1-content__text">
+                        <h2>Тренировки по кикбоксингу и тайскому боксу</h2>
+                        <p>
+                            <i class="fas fa-check"></i>
+                            классический текст-«рыба» (условный, зачастую бессмысленный текст-заполнитель, вставляемый в макет страницы). Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла», написанного в 45 году до н.
+                        </p>
+                        <p>
+                            <i class="fas fa-check"></i>
+                            классический текст-«рыба» (условный, зачастую бессмысленный текст-заполнитель, вставляемый в макет страницы). Является искажённым отрывком из философского трактата Марка Туллия Цицерона «О пределах добра и зла», написанного в 45 году до н.
+                        </p>
+
+                        <div class="button_1">
+                            <a href="#">Подробнее</a>
+
+                        </div>
+                     </div>
+
+                    <div class="block1-content__form">
+                        <form class="form" action="#">
+                            <h3>Обратная связь</h3>
+                            <input class="form-input" name="first_name" placeholder="Full Name" type="text">
+                            <input class="form-input" name="email" placeholder="Enter your email" type="email">
+                            <input class="form-input" name="phone" placeholder="Phone Number" type="number">
+                            <textarea class="form-input__text" name="message" rows="6" placeholder="Your Suggestion ..." type="text"></textarea>
+                            <input class="form-button btn" type="submit">
+                        </form>
+
+                    </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+            <a href="#modal" class="button openModal">
+                <img  class="phone" src="img/phone.png" alt="">
+            </a>
+            <div id="modal" class="modal">
+                <div>
+                    <div class="text" align="center">
+                        <div id="blok_tel">
+                            <form action="" method="post" class="form1">
+                                ЗАКАЗ ОБРАТНОГО ЗВОНКА
+                                <input type="text" name="tel" class="inputbox" value="Номер телефона с кодом"
+                                       onfocus="(this.value == '0123456789') && (this.value = '')"
+                                       onblur="(this.value == '') && (this.value = '0123456789')">
+                                <input type="submit" class="button" name="submit_tel">
+                            </form>
+                            <?if(isset($_POST["submit_tel"]))
+{
+$email = 'ваша_почта@yandex.com';
+/* Отправляем email */
+mail($email, "Заказ обратного звонка на сайте ...", "\n
+Посетитель заказал обратный звонок! \n
+Телефон : ".$_POST['tel']."
+");
+echo 'Заявка принята!';
+}
+?>
+                        </div>
+
+
+                    </div>
+                    <a href="#close" title="Закрыть">Закрыть</a>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="block2"></div>
+        <div class="block3"></div>
+        <div class="block4"></div>
+        <div class="block5"></div>
+        <div class="block6"></div>
+        <div class="block7"></div>
+        <div class="block8"></div>
+    </div>
+</body>
+</html>
